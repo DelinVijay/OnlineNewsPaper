@@ -1,41 +1,58 @@
-/* App.css */
+
 .text-box {
   border: none;
   border-radius: 10px;
   background-color: white;
   color: #000;
-  width: 350px;
+  width: 100%; 
+  max-width: 350px; 
   height: 40px;
-  margin-right: 50px;
   text-align: center;
-  margin-left: 450px;
 }
 
-.btn {
+
+.btn, .btn1 {
   border: none;
   border-radius: 10px;
   background-color: white;
-  width: 100px;
   height: 40px;
-  margin-right: 280px;
+  flex: 1; 
+  max-width: 150px;
+}
+.btn {
+  margin-right: 10px; 
+  margin-left: 10px; 
 }
 
 .btn1 {
-  border: none;
-  border-radius: 10px;
-  background-color: white;
-  width: 150px;
-  height: 40px;
- 
+  margin-left: 10px; 
 }
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .text-box, .btn, .btn1 {
+    width: 100%; 
+    margin: 5px 0; 
+  }
 
+  .btn {
+    margin-right: 10px; 
+  }
+  
+  .btn1 {
+    margin-left: 5px;
+  }
+}
 .light {
   background-color: #f0f0f0;
   color: #000;
 }
 
 .dark {
-  background-color: #1a1a1a;
+background-color: #000;
   color: #e0e0e0;
 }
 
@@ -74,6 +91,12 @@
   display: inline-block;
   width: 300px;
   text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.box:hover,
+.box:focus {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .box-image{
